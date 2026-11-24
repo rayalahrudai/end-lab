@@ -1,0 +1,143 @@
+
+<!DOCTYPE html>
+<html>
+<head>
+    <title>College Homepage</title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body { font-family: Arial; }
+
+        nav {
+            background: navy;
+            color: white;
+            padding: 15px;
+            display: flex;
+            justify-content: space-between;
+        }
+
+        nav a {
+            color: white;
+            text-decoration: none;
+            margin: 10px;
+        }
+
+        .container {
+            display: flex;
+            justify-content: space-around;
+            padding: 30px;
+            gap: 20px;
+            flex-wrap: wrap;
+        }
+
+        table {
+            border-collapse: collapse;
+            width: 100%;
+        }
+
+        th, td {
+            border: 1px solid black;
+            padding: 10px;
+            text-align: center;
+        }
+
+        th { background: lightblue; }
+
+        form {
+            display: flex;
+            flex-direction: column;
+            gap: 10px;
+        }
+
+        input, textarea, button { padding: 10px; }
+
+        button {
+            background: navy;
+            color: white;
+            border: none;
+        }
+
+        footer {
+            background: navy;
+            padding: 15px;
+        }
+
+        @media (max-width: 600px) {
+            nav, .container {
+                flex-direction: column;
+                text-align: center;
+            }
+
+            nav a {
+                display: block;
+                margin: 8px;
+            }
+
+            table { font-size: 12px; }
+        }
+    </style>
+</head>
+
+<body>
+
+    <nav>
+        <h2>College Homepage</h2>
+        <div>
+            <a href="#">Home</a>
+            <a href="#courses">Courses</a>
+            <a href="#contact">Contact</a>
+        </div>
+    </nav>
+
+    <h1 style="text-align:center; padding:20px;">
+        Welcome to Our College
+    </h1>
+
+    <div class="container">
+
+        <section id="courses">
+            <h2>Course Details</h2>
+            <table>
+                <tr>
+                    <th>Course</th>
+                    <th>Duration</th>
+                    <th>Fee</th>
+                </tr>
+                <tr>
+                    <td>HTML</td>
+                    <td>1 Month</td>
+                    <td>1000</td>
+                </tr>
+                <tr>
+                    <td>Java</td>
+                    <td>2 Months</td>
+                    <td>2000</td>
+                </tr>
+                <tr>
+                    <td>Python</td>
+                    <td>3 Months</td>
+                    <td>3000</td>
+                </tr>
+            </table>
+        </section>
+
+        <section id="contact">
+            <h2>Contact Us</h2>
+            <form>
+                <input type="text" placeholder="Enter Name">
+                <input type="email" placeholder="Enter Email">
+                <textarea placeholder="Your Message"></textarea>
+                <button type="submit">Submit</button>
+            </form>
+        </section>
+
+    </div>
+
+    <footer></footer>
+
+</body>
+</html>
